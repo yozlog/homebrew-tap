@@ -10,7 +10,9 @@
 brew tap yozlog/tap
 ```
 
-## 사용 가능한 Formula
+## 내가 개발한 도구
+
+### Formulas
 
 - [**bw-fzf-copy**](https://github.com/yozlog/bw-fzf-copy/): fzf를 사용하여 Bitwarden 보관함 항목을 빠르게 검색하고 복사할 수 있는 스크립트 기반 TUI 도구입니다.
 
@@ -22,4 +24,14 @@ brew install bw-fzf-copy
 
 ```bash
 brew install tui-chan
+```
+
+## 서드파티 도구
+
+### Cask
+
+- [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent 스킬 관리 도구입니다.
+
+```bash
+brew install --cask skills-manager
 ```

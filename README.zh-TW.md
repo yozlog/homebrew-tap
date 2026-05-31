@@ -10,7 +10,9 @@
 brew tap yozlog/tap
 ```
 
-## 可用的工具 (Formulas)
+## 我開發的工具
+
+### Formulas
 
 - [**bw-fzf-copy**](https://github.com/yozlog/bw-fzf-copy/): 透過 fzf 快速搜尋並複製 Bitwarden 項目項目的腳本式 TUI 工具。
 
@@ -22,4 +24,14 @@ brew install bw-fzf-copy
 
 ```bash
 brew install tui-chan
+```
+
+## 第三方工具
+
+### Cask
+
+- [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent 技能（skills）管理工具。
+
+```bash
+brew install --cask skills-manager
 ```

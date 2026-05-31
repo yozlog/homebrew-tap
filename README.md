@@ -10,7 +10,9 @@ My personal collection of Homebrew formulas.
 brew tap yozlog/tap
 ```
 
-## Available Formulas
+## Tools by me
+
+### Formulas
 
 - [**bw-fzf-copy**](https://github.com/yozlog/bw-fzf-copy/): A script-based TUI tool that uses fzf to quickly search and copy items from Bitwarden CLI.
 
@@ -22,4 +24,14 @@ brew install bw-fzf-copy
 
 ```bash
 brew install tui-chan
+```
+
+## Third-party Tools
+
+### Cask
+
+- [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent Skills Manager.
+
+```bash
+brew install --cask skills-manager
 ```
