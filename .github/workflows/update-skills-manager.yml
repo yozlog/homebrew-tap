@@ -52,7 +52,7 @@ jobs:
 
       - name: Commit and Push
         if: env.UPDATE_NEEDED == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore(skills-manager): bump version to ${{ env.LATEST_VERSION }}"
           file_pattern: "Casks/skills-manager.rb"
