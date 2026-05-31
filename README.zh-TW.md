@@ -17,3 +17,9 @@ brew tap yozlog/tap
 ```bash
 brew install bw-fzf-copy
 ```
+
+- [**tui-chan**](https://github.com/yozlog/tui-chan): 終端機 [4chan](https://www.4chan.org/) TUI 客戶端。(Fork 自 [tuqqu/tui-chan](https://github.com/tuqqu/tui-chan))
+
+```bash
+brew install tui-chan
+```
