@@ -28,6 +28,14 @@ brew install tui-chan
 
 ## 第三方工具
 
+### Formulas
+
+- [**dragterm**](https://github.com/Wevah/dragterm): 在 macOS 上從命令列拖曳檔案。
+
+```bash
+brew install dragterm
+```
+
 ### Cask
 
 - [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent 技能（skills）管理工具。

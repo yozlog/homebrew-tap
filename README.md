@@ -28,6 +28,14 @@ brew install tui-chan
 
 ## Third-party Tools
 
+### Formulas
+
+- [**dragterm**](https://github.com/Wevah/dragterm): Drag files from the command line on macOS.
+
+```bash
+brew install dragterm
+```
+
 ### Cask
 
 - [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent Skills Manager.

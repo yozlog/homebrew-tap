@@ -28,6 +28,14 @@ brew install tui-chan
 
 ## 서드파티 도구
 
+### Formulas
+
+- [**dragterm**](https://github.com/Wevah/dragterm): macOS 명령줄에서 파일을 드래그합니다.
+
+```bash
+brew install dragterm
+```
+
 ### Cask
 
 - [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent 스킬 관리 도구입니다.
