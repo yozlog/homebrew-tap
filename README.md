@@ -36,6 +36,12 @@ brew install tui-chan
 brew install dragterm
 ```
 
+- [**smassh**](https://github.com/kraanzu/smassh): TUI-based typing test application inspired by the well-known typing site [Monkeytype](https://monkeytype.com/).
+
+```bash
+brew install smassh
+```
+
 ### Cask
 
 - [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent Skills Manager.

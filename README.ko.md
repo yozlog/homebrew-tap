@@ -36,6 +36,12 @@ brew install tui-chan
 brew install dragterm
 ```
 
+- [**smassh**](https://github.com/kraanzu/smassh): 유명 타자 연습 사이트인 [Monkeytype](https://monkeytype.com/)에서 영감을 받은 TUI 기반 타자 연습 프로그램입니다.
+
+```bash
+brew install smassh
+```
+
 ### Cask
 
 - [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent 스킬 관리 도구입니다.

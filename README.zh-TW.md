@@ -36,6 +36,12 @@ brew install tui-chan
 brew install dragterm
 ```
 
+- [**smassh**](https://github.com/kraanzu/smassh): 靈感來自知名打字測試網站 [Monkeytype](https://monkeytype.com/) 的終端機打字測試工具 (TUI)。
+
+```bash
+brew install smassh
+```
+
 ### Cask
 
 - [**skills-manager**](https://github.com/xingkongliang/skills-manager): AI Agent 技能（skills）管理工具。
