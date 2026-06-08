@@ -49,3 +49,9 @@ brew install smassh
 ```bash
 brew install --cask skills-manager
 ```
+
+- [**stemdeck**](https://github.com/stemdeckapp/stemdeck): 로컬에서 실행되는 오디오 개별 트랙(보컬, 악기) 분리 프로그램입니다.
+
+```bash
+brew install --cask stemdeck
+```

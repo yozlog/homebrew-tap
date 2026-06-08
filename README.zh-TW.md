@@ -49,3 +49,9 @@ brew install smassh
 ```bash
 brew install --cask skills-manager
 ```
+
+- [**stemdeck**](https://github.com/stemdeckapp/stemdeck): 在本地執行的音訊分軌/伴奏分離工具。
+
+```bash
+brew install --cask stemdeck
+```

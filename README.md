@@ -49,3 +49,9 @@ brew install smassh
 ```bash
 brew install --cask skills-manager
 ```
+
+- [**stemdeck**](https://github.com/stemdeckapp/stemdeck): Local-first audio stem separation app.
+
+```bash
+brew install --cask stemdeck
+```
