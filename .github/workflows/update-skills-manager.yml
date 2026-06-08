@@ -48,7 +48,7 @@ jobs:
           
           sed -i "s/version \".*\"/version \"${VERSION}\"/" Casks/skills-manager.rb
           sed -i "s/sha256 arm:   \".*\",/sha256 arm:   \"${ARM_SHA}\",/" Casks/skills-manager.rb
-          sed -i "s/intel: \".*\"/intel: \"${INTEL_SHA}\"/" Casks/skills-manager.rb
+          sed -i "s/         intel: \".*\"/         intel: \"${INTEL_SHA}\"/" Casks/skills-manager.rb
 
       - name: Commit and Push
         if: env.UPDATE_NEEDED == 'true'

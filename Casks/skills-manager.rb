@@ -1,5 +1,5 @@
 cask "skills-manager" do
-  arch arm: "aarch64", intel: "ee0314ab4bfb58277ee5215d78ae9f0764c53cfe6e60387ff3441f1c1470422a"
+  arch arm: "aarch64", intel: "x64"
 
   version "1.23.0"
   sha256 arm:   "1a388f2b54c46405a099b6f18e46e794a9b58d9d9402bed24d41534d9c64db4f",
