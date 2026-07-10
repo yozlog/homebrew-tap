@@ -1,9 +1,9 @@
 cask "skills-manager" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.28.1"
-  sha256 arm:   "737257561403917ab10c6c182ede78175b4cb5e7085dc5dc3ffcb686c75a8955",
-         intel: "ea2cbc1d360e380e4ff9c5c2a5b478c5c72f3233a4f80f3e6b8ef3048fca095b"
+  version "1.28.2"
+  sha256 arm:   "888c191a08ce231b25eb12d308e970cdf2ba3ce8199ec164a300a33c27665c23",
+         intel: "a1547acb7e5ae1e0bbfe7b25ff566a5d28d7a0fac91ba502a4fe8ed8fa9a2edc"
 
   url "https://github.com/xingkongliang/skills-manager/releases/download/v#{version}/skills-manager_#{version}_#{arch}.dmg"
   name "Skills Manager"
