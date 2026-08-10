@@ -1,9 +1,9 @@
 cask "stemdeck" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.8.0-alpha.15"
-  sha256 arm:   "41b61979b3df232520132f099739d1d1d3aa9429ee353933e5594b5af39e9962",
-         intel: "4935799792d229672b27707038906e41470cd9c8e272db5186202f399a23bc75"
+  version "0.8.0-alpha.17"
+  sha256 arm:   "2984aa49850234d7130f9ab43632dd5b7d456fefa8be167f3f1492344a8b91a8",
+         intel: "9e3a7899a5d19f0ac5796648e527f4806aa2f548f2a75b939561a779be1d956d"
 
   url "https://github.com/stemdeckapp/stemdeck/releases/download/v#{version}/StemDeck-macOS-#{arch}.dmg"
   name "StemDeck"
