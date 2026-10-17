@@ -71,15 +71,31 @@ def set_github_env(name, value):
             env_file.write(f"{name}={value}\n")
 
 
-def replace_arch_values(content, stanza, values):
-    pattern = rf'{stanza} arm:\s+"[^"]+",\s*intel:\s+"[^"]+"'
-    replacement = (
-        f'{stanza} arm:   "{values["arm"]}",\n'
-        f'         intel: "{values["intel"]}"'
+def get_arch_version(content, architecture):
+    match = re.search(
+        rf'on_{architecture} do\s+version "([^"]+)"',
+        content,
     )
-    updated, count = re.subn(pattern, replacement, content)
+    if not match:
+        raise RuntimeError(f"Could not parse {architecture} version")
+    return match.group(1)
+
+
+def replace_arch_data(content, architecture, version, checksum):
+    pattern = (
+        rf'(on_{architecture} do\s+version ")[^"]+'
+        rf'("\s+sha256 ")[a-f0-9]+(")'
+    )
+    updated, count = re.subn(
+        pattern,
+        lambda match: (
+            f'{match.group(1)}{version}'
+            f'{match.group(2)}{checksum}{match.group(3)}'
+        ),
+        content,
+    )
     if count != 1:
-        raise RuntimeError(f"Could not update {stanza} stanza")
+        raise RuntimeError(f"Could not update {architecture} version and checksum")
     return updated
 
 
@@ -90,9 +106,10 @@ def main():
 
     assets = get_latest_assets()
     versions = {architecture: details[0] for architecture, details in assets.items()}
-    current_versions = dict(
-        re.findall(r'(arm|intel):\s+"([^"]+)"', re.search(r"version .*", content).group())
-    )
+    current_versions = {
+        architecture: get_arch_version(content, architecture)
+        for architecture in ARCHITECTURES
+    }
 
     print(f"Current versions: {current_versions}")
     print(f"Latest versions:  {versions}")
@@ -105,8 +122,13 @@ def main():
         architecture: calculate_sha256(asset)
         for architecture, (_, asset) in assets.items()
     }
-    content = replace_arch_values(content, "version", versions)
-    content = replace_arch_values(content, "sha256", checksums)
+    for architecture in ARCHITECTURES:
+        content = replace_arch_data(
+            content,
+            architecture,
+            versions[architecture],
+            checksums[architecture],
+        )
 
     with open(cask_path, "w") as cask_file:
         cask_file.write(content)
