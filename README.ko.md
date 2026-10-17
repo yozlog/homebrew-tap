@@ -55,3 +55,9 @@ brew install --cask skills-manager
 ```bash
 brew install --cask stemdeck
 ```
+
+- [**darktable**](https://github.com/darktable-org/darktable): 사진 워크플로 및 RAW 이미지 현상 도구입니다.
+
+```bash
+brew install --cask yozlog/tap/darktable
+```
