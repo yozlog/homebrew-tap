@@ -11,6 +11,10 @@ ARCHITECTURES = {
     "arm": "arm64",
     "intel": "x86_64",
 }
+VERSION_BLOCKS = {
+    "arm": "on_sequoia :or_newer",
+    "intel": "on_intel",
+}
 
 
 def github_request(url):
@@ -72,8 +76,9 @@ def set_github_env(name, value):
 
 
 def get_arch_version(content, architecture):
+    block = re.escape(VERSION_BLOCKS[architecture])
     match = re.search(
-        rf'on_{architecture} do\s+version "([^"]+)"',
+        rf'{block} do\s+version "([^"]+)"',
         content,
     )
     if not match:
@@ -82,8 +87,9 @@ def get_arch_version(content, architecture):
 
 
 def replace_arch_data(content, architecture, version, checksum):
+    block = re.escape(VERSION_BLOCKS[architecture])
     pattern = (
-        rf'(on_{architecture} do\s+version ")[^"]+'
+        rf'({block} do\s+version ")[^"]+'
         rf'("\s+sha256 ")[a-f0-9]+(")'
     )
     updated, count = re.subn(
