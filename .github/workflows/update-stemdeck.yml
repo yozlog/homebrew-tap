@@ -21,6 +21,8 @@ jobs:
           python-version: '3.x'
 
       - name: Run update script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/update_stemdeck.py
 
       - name: Commit and Push changes

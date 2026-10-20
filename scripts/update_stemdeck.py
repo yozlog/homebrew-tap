@@ -8,6 +8,9 @@ import os
 def get_latest_release():
     url = "https://api.github.com/repos/stemdeckapp/stemdeck/releases/latest"
     req = urllib.request.Request(url, headers={"User-Agent": "Homebrew-Tap-Updater"})
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        req.add_header("Authorization", f"Bearer {token}")
     with urllib.request.urlopen(req) as response:
         data = json.loads(response.read().decode())
         tag = data["tag_name"]  # e.g. "v0.7.0-alpha.12"
