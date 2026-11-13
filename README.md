@@ -61,3 +61,17 @@ brew install --cask stemdeck
 ```bash
 brew install --cask yozlog/tap/darktable
 ```
+
+- [**Sine**](https://github.com/CosmoCreeper/Sine): Theme and mod manager for Firefox-based browsers.
+
+```bash
+brew install --cask yozlog/tap/sine
+sine-installer
+```
+
+- [**Disc Image Studio**](https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio): Create visible disc-surface images and optical disc images.
+
+```bash
+brew install --cask yozlog/tap/disc-image-studio
+disc-image-studio --help
+```

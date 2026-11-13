@@ -61,3 +61,17 @@ brew install --cask stemdeck
 ```bash
 brew install --cask yozlog/tap/darktable
 ```
+
+- [**Sine**](https://github.com/CosmoCreeper/Sine): Firefox 系瀏覽器的主題與模組管理工具。
+
+```bash
+brew install --cask yozlog/tap/sine
+sine-installer
+```
+
+- [**Disc Image Studio**](https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio): 建立可見光碟表面圖像與光碟映像檔的工具。
+
+```bash
+brew install --cask yozlog/tap/disc-image-studio
+disc-image-studio --help
+```
