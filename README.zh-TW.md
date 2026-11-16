@@ -75,3 +75,9 @@ sine-installer
 brew install --cask yozlog/tap/disc-image-studio
 disc-image-studio --help
 ```
+
+- [**Kiri**](https://github.com/libracoder/kiri): 相容 Docker 工具的輕量級容器執行環境。
+
+```bash
+brew install --cask yozlog/tap/kiri
+```

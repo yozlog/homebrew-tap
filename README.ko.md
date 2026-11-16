@@ -75,3 +75,9 @@ sine-installer
 brew install --cask yozlog/tap/disc-image-studio
 disc-image-studio --help
 ```
+
+- [**Kiri**](https://github.com/libracoder/kiri): Docker 도구와 호환되는 경량 컨테이너 런타임입니다.
+
+```bash
+brew install --cask yozlog/tap/kiri
+```

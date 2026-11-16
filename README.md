@@ -75,3 +75,9 @@ sine-installer
 brew install --cask yozlog/tap/disc-image-studio
 disc-image-studio --help
 ```
+
+- [**Kiri**](https://github.com/libracoder/kiri): Lightweight container runtime compatible with Docker tooling.
+
+```bash
+brew install --cask yozlog/tap/kiri
+```
