@@ -1,9 +1,9 @@
 cask "disc-image-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.0"
-  sha256 arm:   "b7b35f1bd36ee095d703f7bfb7b1e443da83bae7f003a18d131a411dedccd7f9",
-         intel: "f8eff3d3965da7baa623084ecef14c5d07af11736e99a013b9e341603f525695"
+  version "1.6.0"
+  sha256 arm:   "9a5dbd7398d55037591b70af15a5d1ae3df56a5fef0620dcd58488b5dc236055",
+         intel: "f6cc38c391367b969a5919d31dde19b242fa7fa5269082aa7ab50713fd7a7fc4"
 
   url "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio/releases/download/v#{version}/DiscImageStudio-CLI-v#{version}-osx-#{arch}.tar.gz"
   name "Disc Image Studio"
