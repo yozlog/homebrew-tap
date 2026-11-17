@@ -14,13 +14,19 @@ ARCHITECTURES = {
 
 
 def github_request(url):
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "Homebrew-Tap-Updater",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    if url.startswith("https://api.github.com/") and (
+        token := os.environ.get("GITHUB_TOKEN")
+    ):
+        headers["Authorization"] = f"Bearer {token}"
+
     return urllib.request.Request(
         url,
-        headers={
-            "Accept": "application/vnd.github+json",
-            "User-Agent": "Homebrew-Tap-Updater",
-            "X-GitHub-Api-Version": "2022-11-28",
-        },
+        headers=headers,
     )
 
 

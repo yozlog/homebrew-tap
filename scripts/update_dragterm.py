@@ -5,9 +5,17 @@ import re
 import hashlib
 import os
 
+def github_request(url):
+    headers = {"User-Agent": "Homebrew-Tap-Updater"}
+    if url.startswith("https://api.github.com/") and (
+        token := os.environ.get("GITHUB_TOKEN")
+    ):
+        headers["Authorization"] = f"Bearer {token}"
+    return urllib.request.Request(url, headers=headers)
+
 def get_latest_commit():
     url = "https://api.github.com/repos/Wevah/dragterm/commits/master"
-    req = urllib.request.Request(url, headers={"User-Agent": "Homebrew-Tap-Updater"})
+    req = github_request(url)
     with urllib.request.urlopen(req) as response:
         data = json.loads(response.read().decode())
         sha = data["sha"]
@@ -16,7 +24,7 @@ def get_latest_commit():
         return sha, date
 
 def calculate_sha256(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Homebrew-Tap-Updater"})
+    req = github_request(url)
     with urllib.request.urlopen(req) as response:
         content = response.read()
         return hashlib.sha256(content).hexdigest()

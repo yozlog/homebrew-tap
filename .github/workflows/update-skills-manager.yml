@@ -17,8 +17,10 @@ jobs:
 
       - name: Fetch latest skills-manager release
         id: fetch-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          LATEST_RELEASE=$(curl -sL https://api.github.com/repos/xingkongliang/skills-manager/releases/latest | jq -r '.tag_name' | sed 's/^v//')
+          LATEST_RELEASE=$(curl -sL -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/xingkongliang/skills-manager/releases/latest | jq -r '.tag_name' | sed 's/^v//')
           echo "LATEST_VERSION=$LATEST_RELEASE" >> $GITHUB_ENV
           
           CURRENT_VERSION=$(grep -oE 'version "[0-9\.]+"' Casks/skills-manager.rb | cut -d '"' -f 2)

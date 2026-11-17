@@ -5,9 +5,17 @@ import re
 import hashlib
 import os
 
+def github_request(url):
+    headers = {"User-Agent": "Homebrew-Tap-Updater"}
+    if url.startswith("https://api.github.com/") and (
+        token := os.environ.get("GITHUB_TOKEN")
+    ):
+        headers["Authorization"] = f"Bearer {token}"
+    return urllib.request.Request(url, headers=headers)
+
 def get_latest_release():
     url = "https://api.github.com/repos/kraanzu/smassh/releases/latest"
-    req = urllib.request.Request(url, headers={"User-Agent": "Homebrew-Tap-Updater"})
+    req = github_request(url)
     with urllib.request.urlopen(req) as response:
         data = json.loads(response.read().decode())
         tag = data["tag_name"]  # e.g. "v3.2.1"
@@ -15,7 +23,7 @@ def get_latest_release():
         return tag, version
 
 def calculate_sha256(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Homebrew-Tap-Updater"})
+    req = github_request(url)
     with urllib.request.urlopen(req) as response:
         content = response.read()
         return hashlib.sha256(content).hexdigest()
